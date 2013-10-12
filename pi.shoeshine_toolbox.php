@@ -8,7 +8,7 @@
  * @copyright	Copyright (c) 2003 - 2011, EllisLab, Inc.
  * @license		http://expressionengine.com/user_guide/license.html
  * @link		http://expressionengine.com
- * @since		Version 1.1
+ * @since		Version 1.0
  * @filesource
  */
  
@@ -26,7 +26,7 @@
 
 $plugin_info = array(
 	'pi_name'		=> 'Shoeshine Toolbox',
-	'pi_version'	=> '1.1',
+	'pi_version'	=> '1.0',
 	'pi_author'		=> 'Shoe Shine Design & Development',
 	'pi_author_url'	=> 'http://www.shoeshinedesign.com',
 	'pi_description'=> 'Miscellaneous Tools',
@@ -97,14 +97,14 @@ class Shoeshine_toolbox {
 
 TOOLS :
 
-Odd or Even
-Description: Outputs 'odd' or 'even' based on a number it receives as a parameter or as tag data. Outputs 'nan' if either is not a number.
-Example 1: {exp:shoeshine_toolbox:odd_or_even number='5'} Outputs the string 'odd'
-Example 2: {exp:shoeshine_toolbox:odd_or_even}4{/exp:shoeshine_toolbox:odd_or_even} Outputs the string 'even'
+Even or Odd
+Description: Outputs 'even' or 'odd' based on a number it receives as a parameter or as tag data. Outputs 'nan' if value is not a number.
+Example 1: {exp:shoeshine_toolbox:odd_or_even number='4'} Outputs the string 'even'
+Example 2: {exp:shoeshine_toolbox:odd_or_even}5{/exp:shoeshine_toolbox:odd_or_even} Outputs the string 'odd'
 
 Total Segments
 Description: Outputs the number of segments in the current URI
-Example: {exp:shoeshine_toolbox:total_segments} would output '2' for http://devot-ee.com/add-ons/shoeshine-toolbox
+Example: {exp:shoeshine_toolbox:total_segments} Outputs '2' for http://devot-ee.com/add-ons/shoeshine-toolbox
 
 
 <?php
