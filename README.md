@@ -1,4 +1,4 @@
-Shoeshine Toolbox
+ShoeShine Toolbox
 =================
 
 ## Tools
