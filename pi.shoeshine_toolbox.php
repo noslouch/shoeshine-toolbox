@@ -25,7 +25,7 @@
  */
 
 $plugin_info = array(
-	'pi_name'		=> 'Shoeshine Toolbox',
+	'pi_name'		=> 'ShoeShine Toolbox',
 	'pi_version'	=> '1.0',
 	'pi_author'		=> 'Shoe Shine Design & Development',
 	'pi_author_url'	=> 'http://www.shoeshinedesign.com',
@@ -75,10 +75,7 @@ class Shoeshine_toolbox {
 	public function total_segments()
 	{
 	
-		$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
-		$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-		$data = explode("//",$url);
-		$segments = explode("/",$data[1]);
+		$segments = explode("/",$_SERVER['REQUEST_URI']);
 		$count = count($segments)-2;
 
 		return $count;
@@ -103,8 +100,9 @@ Example 1: {exp:shoeshine_toolbox:odd_or_even number='4'} Outputs the string 'ev
 Example 2: {exp:shoeshine_toolbox:odd_or_even}5{/exp:shoeshine_toolbox:odd_or_even} Outputs the string 'odd'
 
 Total Segments
-Description: Outputs the number of segments in the current URI
+Description: Outputs the number of segments in the current URI.
 Example: {exp:shoeshine_toolbox:total_segments} Outputs '2' for http://devot-ee.com/add-ons/shoeshine-toolbox
+Note: Does not work if you are using Freebie segments in the URI.
 
 
 <?php

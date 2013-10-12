@@ -28,3 +28,5 @@ Outputs the number of segments in the current URI
 `{exp:shoeshine_toolbox:total_segments}`
 
 Outputs '2' for http://devot-ee.com/add-ons/shoeshine-toolbox
+
+Note: Does not work if you are using Freebie segments in the URI.
