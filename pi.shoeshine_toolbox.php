@@ -49,7 +49,7 @@ class Shoeshine_toolbox {
 	/**
 	 * Odd or Even
 	 */
-	public function odd_or_even()
+	public function even_or_odd()
 	{
 	
 		$number_tag = $this->EE->TMPL->tagdata;

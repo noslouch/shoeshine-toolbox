@@ -3,19 +3,19 @@ Shoeshine Toolbox
 
 ## Tools
 
-### Odd or Even
+### Even or Odd
 
-Outputs 'odd' or 'even' based on a number it receives as a parameter or as tag data. Outputs 'nan' if value is not a number.
+Outputs 'even' or 'odd' based on a number it receives as a parameter or as tag data. Outputs 'nan' if value is not a number.
 
 **Examples**
 
-`{exp:shoeshine_toolbox:odd_or_even number='5'}`
+`{exp:shoeshine_toolbox:even_or_odd number='4'}`
+
+Outputs the string 'event'
+
+`{exp:shoeshine_toolbox:even_or_odd}5{/exp:shoeshine_toolbox:even_or_odd}`
 
 Outputs the string 'odd'
-
-`{exp:shoeshine_toolbox:odd_or_even}4{/exp:shoeshine_toolbox:odd_or_even}`
-
-Outputs the string 'even'
 
 =====
 
