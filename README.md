@@ -27,4 +27,4 @@ Outputs the number of segments in the current URI
 
 `{exp:shoeshine_toolbox:total_segments}`
 
-Would output '2' for http://devot-ee.com/add-ons/shoeshine-toolbox
+Outputs '2' for http://devot-ee.com/add-ons/shoeshine-toolbox
