@@ -8,7 +8,7 @@
  * @copyright	Copyright (c) 2003 - 2011, EllisLab, Inc.
  * @license		http://expressionengine.com/user_guide/license.html
  * @link		http://expressionengine.com
- * @since		Version 2.0
+ * @since		Version 1.1
  * @filesource
  */
  
@@ -20,14 +20,14 @@
  * @package		ExpressionEngine
  * @subpackage	Addons
  * @category	Plugin
- * @author		Shoe Shine Design
+ * @author		Shoe Shine Design & Development
  * @link		http://www.shoeshinedesign.com
  */
 
 $plugin_info = array(
 	'pi_name'		=> 'Shoeshine Toolbox',
-	'pi_version'	=> '1.0',
-	'pi_author'		=> 'Shoe Shine Design',
+	'pi_version'	=> '1.1',
+	'pi_author'		=> 'Shoe Shine Design & Development',
 	'pi_author_url'	=> 'http://www.shoeshinedesign.com',
 	'pi_description'=> 'Miscellaneous Tools',
 	'pi_usage'		=> Shoeshine_toolbox::usage()
@@ -68,6 +68,22 @@ class Shoeshine_toolbox {
 		}
 		
 	}
+
+	/**
+	 * Total Segments
+	 */
+	public function total_segments()
+	{
+	
+		$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://';
+		$url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$data = explode("//",$url);
+		$segments = explode("/",$data[1]);
+		$count = count($segments)-2;
+
+		return $count;
+		
+	}
 	
 	// ----------------------------------------------------------------
 	
@@ -85,6 +101,10 @@ Odd or Even
 Description: Outputs 'odd' or 'even' based on a number it receives as a parameter or as tag data. Outputs 'nan' if either is not a number.
 Example 1: {exp:shoeshine_toolbox:odd_or_even number='5'} Outputs the string 'odd'
 Example 2: {exp:shoeshine_toolbox:odd_or_even}4{/exp:shoeshine_toolbox:odd_or_even} Outputs the string 'even'
+
+Total Segments
+Description: Outputs the number of segments in the current URI
+Example: {exp:shoeshine_toolbox:total_segments} would output '2' for http://devot-ee.com/add-ons/shoeshine-toolbox
 
 
 <?php
