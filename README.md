@@ -30,3 +30,17 @@ Outputs the number of segments in the current URI
 Outputs '2' for http://devot-ee.com/add-ons/shoeshine-toolbox
 
 Note: Does not work if you are using Freebie segments in the URI.
+
+=====
+
+### Random Number
+
+Outputs a random number in a set range. The "from" parameter must be lower than "to" parameter.
+
+**Example**
+
+`{exp:shoeshine_toolbox:random_number from="1" to="10"}`
+
+----
+
+Have fun!
