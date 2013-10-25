@@ -26,7 +26,7 @@
 
 $plugin_info = array(
 	'pi_name'		=> 'ShoeShine Toolbox',
-	'pi_version'	=> '1.0',
+	'pi_version'	=> '1.1',
 	'pi_author'		=> 'Shoe Shine Design & Development',
 	'pi_author_url'	=> 'http://www.shoeshinedesign.com',
 	'pi_description'=> 'Miscellaneous Tools',
