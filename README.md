@@ -11,7 +11,7 @@ Outputs 'even' or 'odd' based on a number it receives as a parameter or as tag d
 
 `{exp:shoeshine_toolbox:even_or_odd number='4'}`
 
-Outputs the string 'event'
+Outputs the string 'even'
 
 `{exp:shoeshine_toolbox:even_or_odd}5{/exp:shoeshine_toolbox:even_or_odd}`
 
