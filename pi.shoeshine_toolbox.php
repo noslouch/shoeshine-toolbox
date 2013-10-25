@@ -81,6 +81,23 @@ class Shoeshine_toolbox {
 		return $count;
 		
 	}
+
+	/**
+	 * Random Numer
+	 */
+	public function random_number()
+	{
+	
+		$from_param = $this->EE->TMPL->fetch_param('from', 0);
+		$to_param = $this->EE->TMPL->fetch_param('to', 0);
+		
+		if((!is_numeric($from_param)) || (!is_numeric($to_param)) || ($from_param >= $to_param)) {
+			return false;
+		}
+		
+		return rand($from_param, $to_param);
+		
+	}
 	
 	// ----------------------------------------------------------------
 	
@@ -104,6 +121,9 @@ Description: Outputs the number of segments in the current URI.
 Example: {exp:shoeshine_toolbox:total_segments} Outputs '2' for http://devot-ee.com/add-ons/shoeshine-toolbox
 Note: Does not work if you are using Freebie segments in the URI.
 
+Random Number
+Description: Outputs a random number in a set range. The "from" parameter must be lower than "to" parameter.
+Example: {exp:shoeshine_toolbox:random_number from="1" to="10"}
 
 <?php
 		$buffer = ob_get_contents();
